@@ -21,7 +21,6 @@
 #include <wx/listbox.h>
 //*)
 
-#
 
 class Web_ScannerFrame: public wxFrame
 {

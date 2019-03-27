@@ -167,9 +167,6 @@ void Web_ScannerFrame::OnGo_ButtonClick(wxCommandEvent& event)
                 in_stream->Read(buffer, bufSize);
                 data.Append(buffer);
 
-                wxString msg = wxbuildinfo(long_f);
-                wxMessageBox(msg, wxString::Format(wxT("%i"), data.Length()));
-
                 size_t pos = 0;
                 while(pos < data.Length())
                 {
@@ -177,7 +174,6 @@ void Web_ScannerFrame::OnGo_ButtonClick(wxCommandEvent& event)
                     //if(pos != wxNOT_FOUND)
                         wordCount++;
                 }
-                wxMessageBox(msg, wxString::Format(wxT("%i"), wordCount));
                 strings.Add(line  + "\t" + word + "\t" + wxString::Format(wxT("%i"), wordCount));
 
                 delete buffer;
